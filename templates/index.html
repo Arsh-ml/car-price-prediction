@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}" type="text/css">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }} ">
+
+    <title>Contact Form #4</title>
+  </head>
+  <body>
+  
+
+  <div class="content">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 mr-auto">
+          <h3 class="mb-3">Let's work together</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae sequi, ipsa hic alias officia facilis eveniet, neque laborum cumque maxime soluta. Neque atque necessitatibus ipsam sequi soluta magni, iste vero fuga inventore, explicabo totam quis quia nemo possimus cupiditate doloribus?</p>
+          <p>Quasi optio numquam pariatur amet laudantium, dicta ullam obcaecati nihil eveniet et aperiam beatae illum vitae in asperiores, a ex. Voluptates accusantium, beatae dolorem natus delectus nostrum, iusto nemo optio quas eum, quis a in reprehenderit totam, sequi distinctio impedit.</p>
+          <p>Dolor aliquid, commodi vitae dolorum veniam amet error! Nemo nam quibusdam delectus dolore eveniet officia harum eum sit magnam possimus. Eum optio dolores repellat ea impedit, in unde, rem ipsam rerum autem iusto vero facilis blanditiis explicabo sapiente consequatur provident? <a href="#">info@mywebsite.com</a></p>
+          
+        </div>
+
+        <div class="col-md-6">
+          <div class="box">
+            <h3 class="heading">How Can We Help?</h3>
+
+            <!--Form Begins Here-->
+            <form action="{{ url_for('predict')}}" class="mb-5" method="post" id="contactForm" name="contactForm">
+              <div class="row">
+                
+                <!-- First row -->
+                <div class="col-md-6 form-group">
+                  <label for="name" class="col-form-label">Year *</label>
+                  <input type="number" class="form-control" name="Year" id="first" placeholder="Year" required="required">
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="name" class="col-form-label">Showroom Price</label>
+                  <input type="number" class="form-control" name="Present_Price" id="second" placeholder="Showroom Price" required="required">
+                </div>
+              </div>
+
+              <!-- Second Row -->
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="email" class="col-form-label">Kilometers Driven *</label>
+                  <input type="number" class="form-control" name="Kms_Driven" id="third" placeholder="Kms Driven" required="required">
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="email" class="col-form-label">Number of Owners *</label>
+                  <input type="number" class="form-control" name="Owner" id="fourth" placeholder="Owners" required="required">
+                </div>
+              </div>
+
+              <!-- Third Row -->
+              <div class="row mb-3">
+                <div class="col-md-6 form-group">
+                  <label for="budget" class="col-form-label">Fuel Type</label>
+                  <select class="custom-select" id="fuel" name="Fuel_Type_Petrol" required="required">
+                      <option selected>Choose...</option>
+                      <option value="Petrol">Petrol</option>
+                      <option value="Diesel">Diesel</option>
+                      <option value="Diesel">CNG</option>
+                    </select>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="message" class="col-form-label">Dealer or Individual</label>
+                  <select class="custom-select" id="resea" name="Seller_Type_Individual" required="required">
+                    <option selected>Choose...</option>
+                    <option value="Dealer">Dealer</option>
+                    <option value="Individual">Individual</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Fourth Row -->
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="email" class="col-form-label">Transmission Type *</label>
+                  <select class="custom-select" id="research" name="Transmission_Mannual" required="required">
+                      <option selected>Choose...</option>
+                      <option value="Mannual">Manual Car</option>
+                      <option value="Automatic">Automatic Car</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <input id="sub" type="submit" value="Send Message" class="btn btn-block btn-primary rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+              </div>
+            </form>
+
+            <!-- <div id="form-message-warning mt-4"></div> 
+            <div id="form-message-success"> -->
+              <div style="color: black;">
+                {{ prediction_text }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    
+    
+
+    <!-- <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script> -->
+
+  </body>
+</html>
